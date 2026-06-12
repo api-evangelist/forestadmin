@@ -1,0 +1,61 @@
+specification: API Commons Rate Limits 0.1
+provider: Forest Admin
+providerId: forestadmin
+created: 2026-06-12
+modified: 2026-06-12
+url: https://docs.forestadmin.com/documentation
+
+notes: >
+  Forest Admin uses an agent-based architecture where the Admin Backend REST API is
+  deployed on the customer's own infrastructure. As a result, rate limiting for database
+  queries and CRUD operations is governed by the customer's own server and database capacity
+  rather than centralized Forest Admin-imposed limits. Forest Admin's cloud services
+  (authentication, schema sync, UI delivery) may apply operational limits, but these are
+  not publicly documented. The limits below reflect the agent architecture's known behaviors
+  and general operational guidance.
+
+headers:
+  retryAfter: Retry-After
+  rateLimitRemaining: X-RateLimit-Remaining
+  rateLimitReset: X-RateLimit-Reset
+
+errorCodes:
+  throttled: 429
+
+limits:
+  - scope: schema-sync
+    metric: requests
+    description: >
+      The forestadmin-schema.json is sent to Forest Admin servers once on agent startup.
+      Frequent restarts in rapid succession may trigger throttling on the schema sync endpoint.
+    limit: 60
+    timeFrame: 60s
+    type: per-agent-instance
+
+  - scope: authentication
+    metric: requests
+    description: >
+      JWT token issuance and validation requests to Forest Admin's authentication service.
+      Excessive authentication attempts may be rate-limited to prevent abuse.
+    limit: 100
+    timeFrame: 60s
+    type: per-ip
+
+  - scope: admin-api
+    metric: requests
+    description: >
+      Requests to the customer-hosted Admin Backend REST API. These limits are set by
+      the customer's own infrastructure. Forest Admin recommends appropriate server-side
+      rate limiting to protect backend systems.
+    limit: customer-defined
+    timeFrame: customer-defined
+    type: per-user
+
+  - scope: forest-admin-cloud
+    metric: requests
+    description: >
+      Requests to app.forestadmin.com for UI delivery, team management, and configuration.
+      Operational limits apply but are not publicly documented; contact support for details.
+    limit: undocumented
+    timeFrame: undocumented
+    type: per-account

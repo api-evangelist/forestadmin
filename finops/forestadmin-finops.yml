@@ -1,0 +1,83 @@
+specification: FinOps Framework 1.0
+provider: Forest Admin
+providerId: forestadmin
+created: 2026-06-12
+modified: 2026-06-12
+url: https://www.forestadmin.com/pricing
+
+billingModel: seat-based
+billingCycle: monthly-or-annual
+currency: USD
+annualDiscount: 20%
+
+focusColumns:
+  - ChargeType: Usage
+  - ServiceName: Forest Admin Admin Panel
+  - ServiceCategory: Internal Tools / Operations Orchestration
+  - PublisherName: Forest Admin
+  - ResourceType: User Seat
+  - BillingCurrency: USD
+  - ListUnitPrice: 60.00
+  - ListCostPerMonth: varies-by-seat-count
+  - PricingUnit: per-user/month
+  - Region: SaaS (global)
+
+meters:
+  - name: ActiveUserSeats
+    description: >
+      Number of active user seats billed per month. Forest Admin charges per user
+      on the Scale plan at $60/user/month (monthly) or $48/user/month (annual).
+    unit: user-seat
+    pricingTier: Scale
+    pricePerUnit: 60.00
+    annualPricePerUnit: 48.00
+    currency: USD
+    period: monthly
+
+  - name: ControlPlanSeats
+    description: >
+      Enterprise seats on the Control plan with custom pricing. Minimum commitment
+      of 50 users. Pricing negotiated directly with Forest Admin sales team.
+    unit: user-seat
+    pricingTier: Control
+    pricePerUnit: custom
+    minimumUnits: 50
+    currency: USD
+    period: monthly
+
+  - name: AddOnOnPremise
+    description: On-premise deployment of the Forest Admin UI on customer infrastructure.
+    unit: feature
+    pricePerUnit: custom
+    currency: USD
+    period: monthly
+
+  - name: AddOnWhiteLabel
+    description: White-label branding removal for the admin panel.
+    unit: feature
+    pricePerUnit: custom
+    currency: USD
+    period: monthly
+
+principles:
+  Visibility:
+    description: >
+      Forest Admin provides seat-based billing that is straightforward to track against
+      active user counts. Teams can monitor seat consumption via the admin panel's user
+      management interface. Status transparency is available at status.forestadmin.com.
+    recommendations:
+      - Track active vs. provisioned user seats monthly to avoid overpaying for inactive users
+      - Use annual billing to capture the 20% discount when seat count is predictable
+      - Audit user roles and deactivate unused accounts to reduce seat costs
+
+  Optimization:
+    description: >
+      The agent-based architecture means infrastructure costs (compute, database) are borne
+      by the customer. The main Forest Admin cost lever is seat count. Optimization focuses
+      on right-sizing seat purchases and leveraging annual commitments.
+    recommendations:
+      - Consolidate team members onto shared roles to reduce distinct seat requirements
+      - Evaluate annual vs. monthly billing at renewal (20% savings with annual)
+      - Identify power users vs. occasional users; restrict seats to active contributors
+      - For enterprises, negotiate Control plan pricing based on committed seat volume
+      - Use Forest Admin's free community tier for development and staging environments

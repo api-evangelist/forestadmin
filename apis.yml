@@ -1,0 +1,89 @@
+aid: forestadmin
+name: Forest Admin
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+url: https://raw.githubusercontent.com/api-evangelist/forestadmin/refs/heads/main/apis.yml
+created: 2026-06-12
+modified: 2026-06-12
+specificationVersion: "0.19"
+description: >
+  Forest Admin is an ops orchestration platform and internal tool builder that enables
+  operations and compliance teams to manage data, workflows, and business processes through
+  a customizable admin panel. It uses an agent-based architecture where developers deploy
+  a REST API agent (Admin Backend) on their own infrastructure, keeping data entirely within
+  client-controlled servers. The platform supports Node.js, Ruby on Rails, Python (Django/Flask),
+  and PHP (Laravel/Symfony) agents that introspect data models and expose CRUD, filtering,
+  pagination, and sorting capabilities through a generated Admin API. Forest Admin includes
+  role-based access control (RBAC), JWT-based dual authentication, AI-assisted workflows,
+  MCP server integration, SOC 2 compliance, and human-AI collaboration features for regulated
+  industries such as fintech, KYC/AML, and payments operations.
+tags:
+  - admin panel
+  - internal tools
+  - RBAC
+  - workflow automation
+  - CRUD
+  - operations
+  - fintech
+  - compliance
+  - low-code
+  - AI agents
+apis:
+  - aid: forestadmin:admin-api
+    name: Forest Admin REST API (Admin Backend)
+    description: >
+      The Forest Admin Admin Backend is a REST API deployed on the customer's own
+      infrastructure. It translates UI calls from the Forest Admin browser interface
+      into database queries covering CRUD operations, search and filters, pagination,
+      sorting, smart actions, and chart rendering. Authentication uses dual JWT tokens
+      (FOREST_ENV_SECRET and FOREST_AUTH_SECRET). Agents are available for Node.js,
+      Ruby on Rails, Django, Flask, Laravel, and Symfony.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://docs.forestadmin.com/documentation
+    baseURL: https://app.forestadmin.com
+    tags:
+      - admin
+      - REST
+      - CRUD
+      - JWT
+      - collections
+      - actions
+      - charts
+    properties:
+      - type: Documentation
+        url: https://docs.forestadmin.com/documentation
+      - type: NodeJsAgentReference
+        url: https://forestadmin.github.io/agent-nodejs/
+      - type: OpenAPI
+        url: https://forestadmin.github.io/agent-nodejs/
+    contact:
+      - FN: Forest Admin Support
+        url: https://www.forestadmin.com/forms/support
+
+common:
+  - type: Website
+    url: https://www.forestadmin.com
+  - type: Documentation
+    url: https://docs.forestadmin.com/documentation
+  - type: GitHubOrganization
+    url: https://github.com/ForestAdmin
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/forestadmin
+  - type: Blog
+    url: https://www.forestadmin.com/blog
+  - type: Pricing
+    url: https://www.forestadmin.com/pricing
+  - type: StatusPage
+    url: https://status.forestadmin.com
+  - type: Community
+    url: https://community.forestadmin.com
+  - type: Plans
+    url: plans/forestadmin-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/forestadmin-rate-limits.yml
+  - type: FinOps
+    url: finops/forestadmin-finops.yml
+
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

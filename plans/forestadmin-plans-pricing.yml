@@ -1,0 +1,109 @@
+specification: API Commons Plans 0.1
+provider: Forest Admin
+providerId: forestadmin
+created: 2026-06-12
+modified: 2026-06-12
+reconciled: true
+url: https://www.forestadmin.com/pricing
+
+plans:
+  - name: Free / Community
+    type: freemium
+    description: >
+      Entry-level free tier for small teams getting started with Forest Admin.
+      Allows up to 10 users and provides core admin panel capabilities including
+      CRUD operations, basic search and filtering, and standard permissions.
+    price:
+      amount: 0
+      currency: USD
+      period: monthly
+    quotas:
+      - metric: users
+        limit: 10
+        type: boolean
+      - metric: projects
+        limit: 1
+        type: boolean
+    features:
+      - CRUD operations
+      - Data Explorer
+      - Basic search and filters
+      - Community Slack support
+
+  - name: Scale
+    type: paid
+    description: >
+      Designed for fast-growing operations teams that need to automate processes
+      and move with confidence. Includes real-time dashboards, advanced permissions,
+      audit logs, and human-AI workflow capabilities. Available via self-service signup.
+    price:
+      amount: 60
+      currency: USD
+      period: monthly
+      per: user
+      annualDiscount: 20%
+      annualAmount: 48
+    quotas:
+      - metric: users
+        limit: unlimited
+        type: quota
+    features:
+      - Real-time data and dashboards
+      - Advanced permissions and audit logs
+      - Human and AI workflows
+      - Workflow builder
+      - CRUD actions and LLM actions
+      - MCP client actions
+      - AI agents
+      - Action approvals and versioning
+      - 2FA enforcement
+      - IP whitelisting
+      - Community Slack support
+
+  - name: Control
+    type: enterprise
+    description: >
+      For enterprises and regulated sectors requiring advanced governance and full
+      operational control. Requires a minimum of 50 users. Includes full RBAC with
+      SSO/SAML and SCIM, premium SLA, and a dedicated Field Development Engineer.
+      Custom pricing available via sales contact.
+    price:
+      amount: custom
+      currency: USD
+      period: monthly
+      per: user
+      minimumUsers: 50
+    quotas:
+      - metric: users
+        limit: unlimited
+        type: quota
+    features:
+      - All Scale features
+      - Advanced integrations
+      - Full RBAC with SSO/SAML and SCIM
+      - Premium SLA
+      - Dedicated Field Development Engineer (FDE)
+      - Custom onboarding
+      - User analytics
+
+addons:
+  - name: On-Premise Deployment
+    type: boolean
+    description: Host the Forest Admin UI on your own infrastructure
+    price: custom
+  - name: White Label
+    type: boolean
+    description: Remove Forest Admin branding from the admin panel
+    price: custom
+  - name: Custom Domain
+    type: boolean
+    description: Use your own domain for the admin panel
+    price: custom
+  - name: Custom Invoicing
+    type: boolean
+    description: Custom billing and invoicing arrangements
+    price: custom
+  - name: Premium SLA
+    type: boolean
+    description: Enhanced service level agreement with guaranteed response times
+    price: custom
