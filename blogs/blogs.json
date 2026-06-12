@@ -1,0 +1,20 @@
+{
+  "name": "Forest Admin Blog",
+  "description": "Official Forest Admin blog covering product releases, case studies, technical guides, and industry-specific content for operations and compliance teams.",
+  "url": "https://www.forestadmin.com/blog",
+  "rss": null,
+  "rssNote": "No RSS feed discovered; blog available at https://www.forestadmin.com/blog with 250+ posts covering product updates, release notes, and technical guides.",
+  "categories": [
+    "Product releases",
+    "Monthly release notes",
+    "Case studies",
+    "Technical guides",
+    "Fintech",
+    "Healthtech",
+    "SaaS",
+    "E-commerce",
+    "Operational best practices",
+    "Feature announcements"
+  ],
+  "lastChecked": "2026-06-12"
+}

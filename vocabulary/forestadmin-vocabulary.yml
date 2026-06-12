@@ -1,0 +1,144 @@
+vocabulary:
+  name: Forest Admin Vocabulary
+  description: Key terms, concepts, and entities used across the Forest Admin platform and Admin Backend REST API.
+  version: "1.0"
+  created: "2026-06-12"
+  source: https://docs.forestadmin.com/documentation
+
+terms:
+  # Core Platform Concepts
+  - term: Agent
+    definition: A language-specific package deployed on the customer's own infrastructure that introspects data models and exposes CRUD, filtering, pagination, and sorting via a generated Admin API. Agents are available for Node.js, Ruby on Rails, Django, Flask, Laravel, and Symfony.
+    category: core
+
+  - term: Admin Backend
+    definition: The REST API agent deployed on the customer's server that translates UI calls from the Forest Admin browser interface into database queries.
+    category: core
+
+  - term: Collection
+    definition: A resource type exposed by the Admin Backend, analogous to a database table or model, supporting CRUD operations, filtering, sorting, and pagination.
+    category: core
+
+  - term: Smart Action
+    definition: A custom server-side action defined by the developer that appears in the Forest Admin UI, supporting single-record, bulk, and global scopes.
+    category: actions
+
+  - term: Action Scope
+    definition: Defines which records an action operates on. Values include "Single" (one record), "Bulk" (multiple selected records), and "Global" (entire collection).
+    category: actions
+
+  # Field Types
+  - term: Field
+    definition: A typed attribute belonging to a Collection record. Supports operations including addField, replaceFieldWriting, addFieldValidation, emulateFieldFiltering, emulateFieldSorting, and removeField.
+    category: fields
+
+  - term: columnType
+    definition: The data type of a field. Supported types include String, Number, Date, DateOnly, Boolean, and Layout components.
+    category: fields
+
+  - term: Computed Field
+    definition: A virtual field derived from other field values using a getValues function and a dependencies list.
+    category: fields
+
+  # Relationships
+  - term: ManyToOne
+    definition: A relationship type linking multiple records to a single parent record, configured via addManyToOneRelation() with a foreignKey parameter.
+    category: relationships
+
+  - term: OneToOne
+    definition: An exclusive pairing between two records, configured via addOneToOneRelation().
+    category: relationships
+
+  - term: OneToMany
+    definition: A relationship where a single record connects to multiple related records, configured via addOneToManyRelation() with an originKey parameter.
+    category: relationships
+
+  - term: ManyToMany
+    definition: Bidirectional connections through junction tables, configured via addManyToManyRelation().
+    category: relationships
+
+  - term: ExternalRelation
+    definition: A relationship connecting to data sources beyond the primary data store, configured via addExternalRelation() with a schema and async listRecords function.
+    category: relationships
+
+  # Authentication
+  - term: FOREST_ENV_SECRET
+    definition: A JWT environment-level secret used to authenticate the Agent with the Forest Admin cloud platform.
+    category: authentication
+
+  - term: FOREST_AUTH_SECRET
+    definition: A JWT secret used to sign user session tokens within the Admin Backend.
+    category: authentication
+
+  - term: Dual JWT Authentication
+    definition: The two-token authentication model combining FOREST_ENV_SECRET (environment) and FOREST_AUTH_SECRET (user session).
+    category: authentication
+
+  # Permissions and RBAC
+  - term: RBAC
+    definition: Role-Based Access Control model embedded in the platform that controls which users or roles can view, edit, or trigger actions on collections and records.
+    category: permissions
+
+  - term: Trigger Permission
+    definition: The RBAC permission required for a user to execute a Smart Action in non-development environments.
+    category: permissions
+
+  # Validation
+  - term: Present
+    definition: A field validation rule requiring the field to have a non-null, non-empty value.
+    category: validation
+
+  - term: ShorterThan
+    definition: A field validation rule enforcing a maximum character length on a String field.
+    category: validation
+
+  - term: LongerThan
+    definition: A field validation rule enforcing a minimum character length on a String field.
+    category: validation
+
+  # Filtering and Sorting
+  - term: emulateFieldFiltering
+    definition: An agent capability that enables in-memory filtering on a field that the underlying data source does not natively support filtering on.
+    category: querying
+
+  - term: emulateFieldSorting
+    definition: An agent capability that enables in-memory sorting on a field that the underlying data source does not natively support sorting on.
+    category: querying
+
+  # Platform Integrations
+  - term: MCP Server
+    definition: Model Context Protocol server integration enabling AI agent workflows within the Forest Admin platform.
+    category: integrations
+
+  - term: SOC 2
+    definition: Security compliance certification held by Forest Admin, relevant for regulated industries such as fintech, KYC/AML, and payments.
+    category: compliance
+
+  - term: ResultBuilder
+    definition: A utility object provided to Smart Action execute functions for constructing and returning action results to the UI.
+    category: actions
+
+  # Supported Frameworks
+  - term: forest-express-sequelize
+    definition: Legacy Node.js agent for Sequelize ORM (v9, deprecated in favour of @forestadmin/agent v1).
+    category: agents
+
+  - term: forest-express-mongoose
+    definition: Legacy Node.js agent for Mongoose ODM (v9, deprecated in favour of @forestadmin/agent v1).
+    category: agents
+
+  - term: "@forestadmin/agent"
+    definition: The current-generation Node.js agent package (v1) replacing legacy express-based agents.
+    category: agents
+
+  - term: forest_liana
+    definition: The Ruby on Rails agent gem for Forest Admin.
+    category: agents
+
+  - term: django-forestadmin
+    definition: The Python/Django agent for Forest Admin.
+    category: agents
+
+  - term: laravel-forestadmin
+    definition: The PHP/Laravel agent for Forest Admin (v3 is the current generation).
+    category: agents

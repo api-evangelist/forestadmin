@@ -1,0 +1,176 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "schema": "https://schema.org/",
+    "fa": "https://www.forestadmin.com/vocab#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+
+    "Agent": "fa:Agent",
+    "AdminBackend": "fa:AdminBackend",
+    "Collection": "fa:Collection",
+    "SmartAction": "fa:SmartAction",
+    "Field": "fa:Field",
+    "Relationship": "fa:Relationship",
+    "Permission": "fa:Permission",
+    "Validation": "fa:Validation",
+
+    "name": "schema:name",
+    "description": "schema:description",
+    "url": "schema:url",
+    "version": "schema:version",
+
+    "actionScope": {
+      "@id": "fa:actionScope",
+      "@type": "xsd:string",
+      "@comment": "One of: Single | Bulk | Global"
+    },
+
+    "columnType": {
+      "@id": "fa:columnType",
+      "@type": "xsd:string",
+      "@comment": "Field data type: String | Number | Date | DateOnly | Boolean"
+    },
+
+    "foreignKey": {
+      "@id": "fa:foreignKey",
+      "@type": "xsd:string"
+    },
+
+    "originKey": {
+      "@id": "fa:originKey",
+      "@type": "xsd:string"
+    },
+
+    "relationshipType": {
+      "@id": "fa:relationshipType",
+      "@type": "xsd:string",
+      "@comment": "One of: ManyToOne | OneToOne | OneToMany | ManyToMany | ExternalRelation"
+    },
+
+    "validationType": {
+      "@id": "fa:validationType",
+      "@type": "xsd:string",
+      "@comment": "One of: Present | ShorterThan | LongerThan"
+    },
+
+    "triggerPermission": {
+      "@id": "fa:triggerPermission",
+      "@type": "xsd:boolean"
+    },
+
+    "forestEnvSecret": {
+      "@id": "fa:forestEnvSecret",
+      "@type": "xsd:string",
+      "@comment": "JWT environment-level secret (FOREST_ENV_SECRET)"
+    },
+
+    "forestAuthSecret": {
+      "@id": "fa:forestAuthSecret",
+      "@type": "xsd:string",
+      "@comment": "JWT user session secret (FOREST_AUTH_SECRET)"
+    },
+
+    "agentFramework": {
+      "@id": "fa:agentFramework",
+      "@type": "xsd:string",
+      "@comment": "One of: nodejs | rails | django | flask | laravel | symfony"
+    },
+
+    "execute": {
+      "@id": "fa:execute",
+      "@type": "@id"
+    },
+
+    "form": {
+      "@id": "fa:form",
+      "@type": "@id"
+    },
+
+    "dependencies": {
+      "@id": "fa:dependencies",
+      "@container": "@list"
+    },
+
+    "getValues": {
+      "@id": "fa:getValues",
+      "@type": "@id"
+    },
+
+    "listRecords": {
+      "@id": "fa:listRecords",
+      "@type": "@id"
+    },
+
+    "schema_def": {
+      "@id": "fa:schemaDef",
+      "@type": "@id"
+    },
+
+    "resultBuilder": {
+      "@id": "fa:resultBuilder",
+      "@type": "@id"
+    },
+
+    "mcpServer": {
+      "@id": "fa:mcpServer",
+      "@type": "@id"
+    },
+
+    "rbac": {
+      "@id": "fa:rbac",
+      "@type": "@id"
+    },
+
+    "soc2": {
+      "@id": "fa:soc2",
+      "@type": "xsd:boolean"
+    }
+  },
+
+  "@graph": [
+    {
+      "@id": "fa:Agent",
+      "@type": "schema:SoftwareApplication",
+      "name": "Forest Admin Agent",
+      "description": "Language-specific package deployed on the customer's own infrastructure that introspects data models and exposes a generated Admin REST API.",
+      "url": "https://docs.forestadmin.com/documentation"
+    },
+    {
+      "@id": "fa:AdminBackend",
+      "@type": "schema:WebAPI",
+      "name": "Forest Admin Admin Backend",
+      "description": "REST API agent translating UI calls from the Forest Admin browser interface into database queries.",
+      "url": "https://app.forestadmin.com"
+    },
+    {
+      "@id": "fa:Collection",
+      "@type": "schema:DataFeed",
+      "name": "Forest Admin Collection",
+      "description": "A resource type exposed by the Admin Backend supporting CRUD, filtering, sorting, and pagination."
+    },
+    {
+      "@id": "fa:SmartAction",
+      "@type": "schema:Action",
+      "name": "Forest Admin Smart Action",
+      "description": "Custom server-side action defined by the developer, supporting Single, Bulk, and Global scopes."
+    },
+    {
+      "@id": "fa:Field",
+      "@type": "schema:PropertyValue",
+      "name": "Forest Admin Field",
+      "description": "A typed attribute on a Collection supporting addField, replaceFieldWriting, addFieldValidation, emulateFieldFiltering, emulateFieldSorting, and removeField."
+    },
+    {
+      "@id": "fa:Relationship",
+      "@type": "schema:StructuredValue",
+      "name": "Forest Admin Relationship",
+      "description": "A logical link between Collections: ManyToOne, OneToOne, OneToMany, ManyToMany, or ExternalRelation."
+    },
+    {
+      "@id": "fa:Permission",
+      "@type": "schema:DigitalDocument",
+      "name": "Forest Admin RBAC Permission",
+      "description": "Role-Based Access Control entry governing visibility and triggering of collections and smart actions."
+    }
+  ]
+}
