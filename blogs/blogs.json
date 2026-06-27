@@ -1,29 +1,17 @@
 {
-  "name": "Forest Admin Blog",
-  "description": "Official Forest Admin blog covering product releases, case studies, technical guides, and industry-specific content for operations and compliance teams.",
-  "url": "https://www.forestadmin.com/blog",
-  "rss": null,
-  "rssNote": "No RSS feed discovered; blog available at https://www.forestadmin.com/blog with 250+ posts covering product updates, release notes, and technical guides.",
-  "categories": [
-    "Product releases",
-    "Monthly release notes",
-    "Case studies",
-    "Technical guides",
-    "Fintech",
-    "Healthtech",
-    "SaaS",
-    "E-commerce",
-    "Operational best practices",
-    "Feature announcements"
-  ],
-  "lastChecked": "2026-06-12",
   "repo": "forestadmin",
+  "name": "Forest Admin Blog",
+  "description": "Official Forest Admin (now Forest) blog covering product releases, case studies, technical guides, and industry-specific content for operations and compliance teams.",
+  "url": "https://www.forestadmin.com/blog",
   "feeds": [
     {
-      "source": "https://www.linkedin.com/company/forestadmin",
-      "error": "HTTPError"
+      "source": "https://www.forestadmin.com/blog",
+      "feed_url": "",
+      "saved": 0,
+      "method": "agent-scrape"
     }
   ],
-  "post_count": 0,
-  "fetched": "2026-06-14T20:42:17Z"
+  "fetched": "2026-06-27T12:42:36Z",
+  "post_count": 20,
+  "agent_pulled": "2026-06-27"
 }

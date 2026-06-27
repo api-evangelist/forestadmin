@@ -83,7 +83,7 @@ common:
     url: rate-limits/forestadmin-rate-limits.yml
   - type: FinOps
     url: finops/forestadmin-finops.yml
-  - type: Blogs
+  - type: Blog
     url: blogs/blogs.json
   - type: Vocabulary
     url: vocabulary/forestadmin-vocabulary.yml
