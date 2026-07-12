@@ -61,6 +61,8 @@ apis:
         url: https://www.forestadmin.com/forms/support
 
 common:
+  - type: DomainSecurity
+    url: security/forestadmin-domain-security.yml
   - type: Website
     url: https://www.forestadmin.com
   - type: Documentation
