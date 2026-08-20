@@ -30,6 +30,16 @@ description: >
   MCP server integration, SOC 2 compliance, and human-AI collaboration features for regulated
   industries such as fintech, KYC/AML, and payments operations.
 tags:
+  - Admin Panel
+  - Internal Tools
+  - RBAC
+  - Workflow-Automation
+  - CRUD
+  - Fintech
+  - Compliance
+  - Low-Code
+  - AI Agents
+tags_raw:
   - admin panel
   - internal tools
   - RBAC
@@ -54,6 +64,14 @@ apis:
     humanURL: https://docs.forestadmin.com/documentation
     baseURL: https://app.forestadmin.com
     tags:
+      - Admin
+      - REST
+      - CRUD
+      - JWT
+      - Collection
+      - Actions
+      - Charts
+    tags_raw:
       - admin
       - REST
       - CRUD
