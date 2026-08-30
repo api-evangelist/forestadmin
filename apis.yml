@@ -41,14 +41,14 @@ description: >
   MCP server integration, SOC 2 compliance, and human-AI collaboration features for regulated
   industries such as fintech, KYC/AML, and payments operations.
 tags:
-  - Admin Panel
-  - Internal Tools
+  - admin panel
+  - internal tools
   - RBAC
-  - Workflow-Automation
+  - workflow automation
   - CRUD
   - Fintech
   - Compliance
-  - Low-Code
+  - low-code
   - AI Agents
 tags_raw:
   - admin panel
@@ -126,8 +126,6 @@ common:
     url: rate-limits/forestadmin-rate-limits.yml
   - type: FinOps
     url: finops/forestadmin-finops.yml
-  - type: Blog
-    url: blogs/blogs.json
   - type: Vocabulary
     url: vocabulary/forestadmin-vocabulary.yml
   - type: JSONLDContext
