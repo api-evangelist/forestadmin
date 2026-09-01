@@ -41,14 +41,14 @@ description: >
   MCP server integration, SOC 2 compliance, and human-AI collaboration features for regulated
   industries such as fintech, KYC/AML, and payments operations.
 tags:
-  - admin panel
-  - internal tools
+  - Admin Panel
+  - Internal Tools
   - RBAC
-  - workflow automation
+  - Workflow-Automation
   - CRUD
   - Fintech
   - Compliance
-  - low-code
+  - Low-Code
   - AI Agents
 tags_raw:
   - admin panel
