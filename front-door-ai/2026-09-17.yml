@@ -1,0 +1,32 @@
+# Front Door AI Index — forestadmin — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: forestadmin
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: www.forestadmin.com
+  final_host: forest.app
+  ownership: own
+  owner: forestadmin
+  shares_host_with: null
+  inherited_from: null
+  verdict: scored
+  score: 42
+  host_score: 42
+  density: 12.62
+  words: 3329
+  tiers:
+    agentic: 23
+    core: 15
+    model: 4
+  ambiguous: 44
+  top_terms:
+    agent: 44
+    AI: 9
+    MCP: 9
+    AI agent: 8
+    LLMs: 6
+    Claude: 4
+    agentic: 3
+    prompts: 3
