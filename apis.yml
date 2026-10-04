@@ -41,11 +41,14 @@ description: >
   role-based access control (RBAC), JWT-based dual authentication, AI-assisted workflows,
   MCP server integration, SOC 2 compliance, and human-AI collaboration features for regulated
   industries such as fintech, KYC/AML, and payments operations.
+x-docs-platform: mintlify
+x-docs-platform-confidence: medium
+x-docs-platform-checked: 2026-10-03
 tags:
   - Admin Panel
   - Internal Tools
   - RBAC
-  - Workflow-Automation
+  - Workflow Automation
   - CRUD
   - Fintech
   - Compliance
@@ -62,6 +65,7 @@ tags_raw:
   - compliance
   - low-code
   - AI agents
+  - Workflow-Automation
 apis:
   - aid: forestadmin:admin-api
     name: Forest Admin REST API (Admin Backend)
