@@ -112,3 +112,28 @@ addons:
     type: boolean
     description: Enhanced service level agreement with guaranteed response times
     price: custom
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - negotiated
+  units: []
+  plans:
+  - name: Free / Community
+    access: freemium
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
+  - name: Scale
+    access: paid
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
+  - name: Control
+    access: enterprise
+    model: negotiated
+    model_how: derived
+    units: []
+    periods: []
