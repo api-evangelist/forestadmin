@@ -1,4 +1,4 @@
-# Forest Admin (forestadmin)
+# Forest Admin
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,73 +64,118 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Forest Admin is an ops orchestration platform and internal tool builder that enables operations and compliance teams to manage data, workflows, and business processes through a customizable admin panel. It uses an agent-based architecture where developers deploy a REST API agent (Admin Backend) on their own infrastructure, keeping data entirely within client-controlled servers. The platform supports Node.js, Ruby on Rails, Python (Django/Flask), and PHP (Laravel/Symfony) agents with role-based access control, JWT authentication, AI-assisted workflows, and SOC 2 compliance for regulated industries.
+Forest Admin is an ops orchestration platform and internal tool builder that enables operations and compliance teams to manage data, workflows, and business processes through a customizable admin panel. It uses an agent-based architecture where developers deploy a REST API agent (Admin Backend) on their own infrastructure, keeping data entirely within client-controlled servers. The platform supports Node.js, Ruby on Rails, Python (Django/Flask), and PHP (Laravel/Symfony) agents that introspect data models and expose CRUD, filtering, pagination, and sorting capabilities through a generated Admin API. Forest Admin includes role-based access control (RBAC), JWT-based dual authentication, AI-assisted workflows, MCP server integration, SOC 2 compliance, and human-AI collaboration features for regulated industries such as fintech, KYC/AML, and payments operations.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/forestadmin/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/forestadmin/refs/heads/main/apis.yml)
+**Areas:** Admin Panel · Internal Tools · RBAC · Workflow Automation · CRUD · Fintech · Compliance · Low-Code · AI Agents
 
-**Naftiko:** [https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=forestadmin-api-evangelist&utm_content=repo](https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=forestadmin-api-evangelist&utm_content=repo)
+## Forest Admin on APIs.io
 
-## Tags
+Everything profiled for Forest Admin is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/forestadmin/](https://apis.io/providers/forestadmin/)** — or go straight to one of the APIs or properties below.
 
-- admin panel
-- internal tools
-- RBAC
-- workflow automation
-- CRUD
-- operations
-- fintech
-- compliance
-- low-code
-- AI agents
+### APIs (1)
 
-## APIs
+- [Forest Admin REST API (Admin Backend)](https://apis.io/apis/forestadmin/admin-api/) — The Forest Admin Admin Backend is a REST API deployed on the customer's own infrastructure. It translates UI calls from the Forest Admin browser interface…
 
-### Forest Admin REST API (Admin Backend)
+### Published properties
 
-The Forest Admin Admin Backend is a REST API deployed on the customer's own infrastructure. It translates UI calls from the Forest Admin browser interface into database queries covering CRUD operations, search and filters, pagination, sorting, smart actions, and chart rendering. Authentication uses dual JWT tokens (FOREST_ENV_SECRET and FOREST_AUTH_SECRET).
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-- **Documentation:** [https://docs.forestadmin.com/documentation](https://docs.forestadmin.com/documentation)
-- **Node.js Agent Reference:** [https://forestadmin.github.io/agent-nodejs/](https://forestadmin.github.io/agent-nodejs/)
+#### JSON-LD (1)
 
-**Supported agents:**
-- Node.js (@forestadmin/agent v1)
-- Ruby on Rails (forest_liana)
-- Python Django (forestadmin-agent-django)
-- Python Flask (forestadmin-agent-flask)
-- PHP Laravel (forestadmin/laravel-forestadmin)
-- PHP Symfony (forestadmin/symfony-forestadmin)
+Linked-data contexts for the provider's vocabulary.
 
-## Plans / Rate Limits / FinOps
+- [Forestadmin Context](https://apis.io/jsonld/forestadmin/forestadmin-context/)
 
-| Resource | File |
-|----------|------|
-| Plans & Pricing | [plans/forestadmin-plans-pricing.yml](plans/forestadmin-plans-pricing.yml) |
-| Rate Limits | [rate-limits/forestadmin-rate-limits.yml](rate-limits/forestadmin-rate-limits.yml) |
-| FinOps | [finops/forestadmin-finops.yml](finops/forestadmin-finops.yml) |
+#### Vocabulary (1)
 
-**Pricing summary:**
-- **Free/Community:** Up to 10 users, core CRUD features at no cost
-- **Scale:** $60/user/month ($48/user/month annual) for growing ops teams
-- **Control:** Custom pricing, minimum 50 users, for enterprises and regulated sectors
+The provider's domain terms, defined.
 
-## Timestamps
+- [Forest Admin Vocabulary](https://apis.io/vocabularies/forestadmin/forestadmin-vocabulary/)
 
-- **Created:** 2026-06-12
-- **Modified:** 2026-06-12
+#### Security (1)
 
-## Common Properties
+Authentication, trust centre, and vulnerability disclosure.
 
-| Type | URL |
-|------|-----|
-| Website | [https://www.forestadmin.com](https://www.forestadmin.com) |
-| Documentation | [https://docs.forestadmin.com/documentation](https://docs.forestadmin.com/documentation) |
-| GitHub Organization | [https://github.com/ForestAdmin](https://github.com/ForestAdmin) |
-| LinkedIn | [https://www.linkedin.com/company/forestadmin](https://www.linkedin.com/company/forestadmin) |
-| Blog | [https://www.forestadmin.com/blog](https://www.forestadmin.com/blog) |
-| Pricing | [https://www.forestadmin.com/pricing](https://www.forestadmin.com/pricing) |
-| Status Page | [https://status.forestadmin.com](https://status.forestadmin.com) |
-| Community | [https://community.forestadmin.com](https://community.forestadmin.com) |
+- [Forestadmin Domain Security](https://apis.io/security/forestadmin/forestadmin-domain-security/)
 
-## Maintainers
+#### Plans and pricing (1)
 
-- **Kin Lane** — [kin@apievangelist.com](mailto:kin@apievangelist.com)
+Published plans, tiers and prices.
+
+- [Forestadmin Plans Pricing](https://apis.io/plans/forestadmin/forestadmin-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Forestadmin Rate Limits](https://apis.io/rate-limits/forestadmin/forestadmin-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Forestadmin Finops](https://apis.io/finops/forestadmin/forestadmin-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.forestadmin.com)
+- [Documentation](https://docs.forestadmin.com/documentation)
+- [Pricing](https://www.forestadmin.com/pricing)
+- [Blog](https://www.forestadmin.com/blog)
+- [GitHub](https://github.com/ForestAdmin)
+- [Status](https://status.forestadmin.com)
+
+## API Evangelist rating
+
+**Kin Score 24.3** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 38.7 |
+| Contract governance | 13.6 |
+| Operational transparency | 18.4 |
+| Developer ergonomics | 4.8 |
+| Access clarity | 18.4 |
+
+**Agent readiness 13.6** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 10.8** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/forestadmin/](https://apis.io/providers/forestadmin/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Forest Admin: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/forestadmin/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
